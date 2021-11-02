@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
+    <style>
+        body{
+            background-color: moccasin;
+        }
+        .container{
+            background-color: dimgrey;
+            border: 5px solid grey;
+            margin: 10px;
+            padding: 10px 0px 10px 50px;
+            margin-right: 10px;
+            height: 550px;
+            width: 800px;
+        }
+        #myCalc{
+            font-style: italic;
+            font-size: 30px;
+            color: blue;
+            offset-position: 50px;
+            padding-bottom: 30px;
+        }
+        #sub:hover, #res:hover, #input1:hover, #input2:hover,#input3:hover{
+            background-color: greenyellow;
+        }
+        #sub,#res{
+            color: cornflowerblue;
+            padding: 5px 33px 5px 33px;
+            
+        }
+        p{
+            font-size: 20px;
+        }
+    </style>
+  </head>
+  <body>
+<div class="" style="margin-left: 300px; margin-top: 50px;">
+<div class="container mx-3 my-3 p-5">   
+     <label class="offset-3" id="myCalc"><strong>My Simple Addition Calculator</strong></label>
+     <p>Enter two numbers or click on the up or down scrolls and press Submit to get sum and Reset to start over again</p> 
+      <div class=" row n1 my-2 p-3">
+          <label class="col-3 color-blue" for=""><b>Number1:</b> </label>
+          <input class="col-8 i1 mx-3 p-2" type="number" name="addition" id="input1"/>
+    </div>
+      <div class="row n2 my-2 p-3"> 
+          <label class="col-3" for=""><b>Number2:</b></label>
+          <input class="col-8 i2 mx-3 p-2" type="number" name="addition" id="input2"/>
+     </div>
+      
+      <div class="row s my-2 p-3">
+        <label class="col-3" for=""><b>Sum:</b></label>
+       <input class="col-8 si mx-3 p-2" type="number" name="addition" id="input3" value="" />
+    </div>
+    <button class="offset-6 " type="submit" id="sub" value="submit">
+        <b>Submit</b>
+      </button>
+      <button class="offset-1 " type="reset" id="res">
+        <b>Reset</b>
+      </button>  
+</div>
+</div>
+    <script>
+        document.getElementById('sub').onclick = function(){
+          let num1 = document.getElementById("input1").value;
+          let num2 = document.getElementById("input2").value;
+          let sum = Number(num1) + Number(num2);
+         document.getElementById("input3").value=sum;
+          
+        }
+        document.getElementById('res').onclick = function(){
+           document.getElementById("input1").value="";          
+          document.getElementById("input2").value="";
+         document.getElementById("input3").value="";
+        }        
+      </script>
+  </body>
+</html>
